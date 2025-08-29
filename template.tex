@@ -1,1 +1,64 @@
+\documentclass{amsart}
+\usepackage[a4paper, margin={1in,1in}, headheight=12pt]{geometry}
+\usepackage{amsmath, amsthm, pgfplots, fancyhdr, subfiles, hyperref}
+\usepackage[many]{tcolorbox}
 
+\newtheorem{theorem}{Theorem}
+\newtheorem*{definition}{Definition}
+
+\newtheorem*{solution}{Solution}
+\tcolorboxenvironment{solution}{
+	 colback=blue!5!white,
+	 boxrule=0pt,
+	 boxsep=1pt,
+	 left=2pt,right=2pt,top=2pt,bottom=2pt,
+	 oversize=2pt,
+	 sharp corners,
+	 before skip=\topsep,
+	 after skip=\topsep,
+}
+
+\newtcolorbox{example}[2][]
+{
+	colframe = purple!25,
+	colback  = purple!10,
+	width=\textwidth,
+	boxrule=2.5pt,
+	before skip=8pt,
+	after skip =8pt,
+	coltitle = purple!20!black,  
+	title    = \textbf{Worked Example:} {#2},
+	#1,
+}
+
+%% Header!
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{Autumn Keesbury, \thepage}
+\fancyfoot[R]{Fall 2024 \textemdash Spring 2025}
+
+%% Plots!
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{patterns}
+\usepackage{wrapfig}
+\definecolor{medgrey}{RGB}{130,130,130}
+\definecolor{Acolor}{RGB}{134, 218, 200}
+
+\title{\textbf{Notes For} subject}
+\date{Semester}
+\author{Keesbury, Autumn}
+
+\begin{document}
+\maketitle
+
+\pagenumbering{roman}
+
+\textit{Note: These notes are presented in order of in-class introduction.}
+\tableofcontents
+
+\newpage
+
+\pagenumbering{arabic}
+
+\end{document}
